@@ -1,0 +1,50 @@
+<script>
+
+    function computerPlay () {
+        // this function will give me a random rock paper scissors
+        let items = ["Rock", "Paper", "Scissors"]    
+        let item = items[Math.floor(Math.random()*items.length)];
+        return item;
+        };
+    
+    function playRound(playerSelection, computerSelection) {
+        // your code here!
+        let playerLower = playerSelection.toLowerCase();
+        let computerLower = computerSelection.toLowerCase();
+        let result;
+        result = (playerLower == computerLower) ? "It's a draw" : 
+        (playerLower == "rock" && computerLower == "scissors") ? "You Win" : 
+        (playerLower == "paper" && computerLower == "rock") ? "You Win" :
+        (playerLower == "scissors" && computerLower == "paper") ? "You Win" : 
+        "You Lose";
+        return result;
+    }    
+    
+    
+    function game() {
+        let lostMatches = 0;
+        let wonMatches = 0;
+        let draws = 0;
+        
+        for (let i = 1; i <= 5; i++){
+            const playerSelection = prompt("Rock, Paper or Scissors?");
+            const computerSelction = computerPlay();
+            
+            let result = playRound(playerSelection, computerSelction)    
+        
+            "You Win" == result ? wonMatches += 1 :
+            "You Lose" == result ? lostMatches += 1:
+            draws += 1;
+    
+        }
+    
+        return `Lost: ${lostMatches}, Won: ${wonMatches}, Draws: ${draws}`
+    
+    }
+    
+    
+    console.log(game())
+    
+    
+    </script>
+    
