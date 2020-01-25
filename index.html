@@ -1,50 +1,18 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-    function computerPlay () {
-        // this function will give me a random rock paper scissors
-        let items = ["Rock", "Paper", "Scissors"]    
-        let item = items[Math.floor(Math.random()*items.length)];
-        return item;
-        };
-    
-    function playRound(playerSelection, computerSelection) {
-        // your code here!
-        let playerLower = playerSelection.toLowerCase();
-        let computerLower = computerSelection.toLowerCase();
-        let result;
-        result = (playerLower == computerLower) ? "It's a draw" : 
-        (playerLower == "rock" && computerLower == "scissors") ? "You Win" : 
-        (playerLower == "paper" && computerLower == "rock") ? "You Win" :
-        (playerLower == "scissors" && computerLower == "paper") ? "You Win" : 
-        "You Lose";
-        return result;
-    }    
-    
-    
-    function game() {
-        let lostMatches = 0;
-        let wonMatches = 0;
-        let draws = 0;
-        
-        for (let i = 1; i <= 5; i++){
-            const playerSelection = prompt("Rock, Paper or Scissors?");
-            const computerSelction = computerPlay();
-            
-            let result = playRound(playerSelection, computerSelction)    
-        
-            "You Win" == result ? wonMatches += 1 :
-            "You Lose" == result ? lostMatches += 1:
-            draws += 1;
-    
-        }
-    
-        return `Lost: ${lostMatches}, Won: ${wonMatches}, Draws: ${draws}`
-    
-    }
-    
-    
-    console.log(game())
-    
-    
-    </script>
-    
+</head>
+<body>
+    <button id = "Rock">Rock</button>
+    <button id = "Paper">Paper</button>
+    <button id = "Scissors">Scissors</button>
+    <p id = "score"></p>
+    <p id = "result"></p>
+</body>
+<script src="script.js"></script>
+</html>
