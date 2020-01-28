@@ -45,8 +45,6 @@ function countGames (result) {
         }
     }
 
-
-
 let lostMatches = 0;
 let wonMatches = 0;
 let draws = 0;
