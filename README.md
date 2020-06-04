@@ -1,4 +1,5 @@
-Here is a javascript rock paper scissor game as part of the Odin Project
+# Rock Paper Scissors Game
+I've implemented a simple JS RPS game that allows you to play against a pc. No styling was done on how it looks
 
-
-https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors
+#### See it in action
+https://langarus.github.io/rock_paper_scissor_javascript_basic/
